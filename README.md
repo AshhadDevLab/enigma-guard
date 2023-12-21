@@ -1,8 +1,8 @@
-![Enigma Guard](https://i.imgur.com/ITZs8vh.png)
-
 # Enigma Guard
 
 Enigma Guard is a versatile encryption and decryption tool designed to provide users with robust security measures for their data.
+
+![Enigma Guard](https://i.imgur.com/ITZs8vh.png)
 
 ## About
 

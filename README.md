@@ -1,4 +1,4 @@
-![Enigma Guard](https://imgur.com/a/agvHcF8)
+![Enigma Guard](https://i.imgur.com/ITZs8vh.png)
 
 # Enigma Guard
 

@@ -8,6 +8,7 @@ darkdetect==0.8.0
 fernet==1.0.1
 idna==3.6
 importlib-metadata==7.0.0
+packaging==23.2
 Pillow==10.1.0
 pyaes==1.6.1
 pycparser==2.21

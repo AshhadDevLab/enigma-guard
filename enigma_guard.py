@@ -15,7 +15,7 @@ from CTkMessagebox import CTkMessagebox
 import pystray
 import pickle
 
-customtkinter.set_default_color_theme(".\\_internal\\green.json")
+customtkinter.set_default_color_theme(".\\_internal\\src\\green.json")
 
 app = customtkinter.CTk()
 app.geometry('%dx%d+%d+%d' % (1600, 900, (app.winfo_screenwidth()/2) - (1600/2), (app.winfo_screenheight()/2) - (900/2)))

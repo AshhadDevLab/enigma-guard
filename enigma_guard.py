@@ -1216,10 +1216,7 @@ def read_checkbox_state():
     except FileNotFoundError:
         return None
 
-icon = None
-
 def destroy_window():
-    global icon
     checkbox_state = check_var.get()
     save_checkbox_state(checkbox_state)
     if checkbox_state == 'on':
@@ -1240,7 +1237,6 @@ def destroy_window():
 
     else:
         app.destroy()
-        icon.stop()
 
 settings_minimize_frame = customtkinter.CTkLabel(settings_frame_win,text="",image=settings_minimize)
 settings_minimize_frame.place(x=420,y=121)
@@ -1251,14 +1247,21 @@ checkbox.place(x=1078,y=33)
 
 app.protocol("WM_DELETE_WINDOW", destroy_window)
 
+label_update = [
+    total_encryptions_decryptions_label,
+    total_encryptions_decryptions_label2,
+    total_encryptions_decryptions_label3,
+    total_encryptions_decryptions_label4,
+    total_encryptions_decryptions_label5
+]
+
 update_time()
 update_pygal_analytics_graph(pygal_analytics_graph)
 read_checkbox_state()
-update_total_encryptions_decryptions_label(total_encryptions_decryptions_label)
-update_total_encryptions_decryptions_label(total_encryptions_decryptions_label2)
-update_total_encryptions_decryptions_label(total_encryptions_decryptions_label3)
-update_total_encryptions_decryptions_label(total_encryptions_decryptions_label4)
-update_total_encryptions_decryptions_label(total_encryptions_decryptions_label5)
+
+for label in label_update:
+    update_total_encryptions_decryptions_label(label)
+
 update_total_decryptions_analytic_frame_label(total_decryptions_analytic_frame_label)
 update_total_encryptions_analytic_frame_label(total_encryptions_analytic_frame_label)
 

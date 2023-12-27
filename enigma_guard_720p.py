@@ -818,21 +818,21 @@ def ashhad_github_callback():
 ashhad_github = customtkinter.CTkButton(frame_main_win, width=30, height=30, image=ashhad_github_img,text="", bg_color="#000000", fg_color="#000000",hover=True,hover_color="#42414D",command=ashhad_github_callback)
 ashhad_github.place(x=1210,y=18)
 
-total_encryptions_decryptions_label = customtkinter.CTkLabel(analytics_frame_win, width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000")
+total_encryptions_decryptions_label = customtkinter.CTkLabel(analytics_frame_win, width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000",text_color="#FFFFFF")
 total_encryptions_decryptions_label.place(x=127,y=140)
 
-total_app_time = customtkinter.CTkLabel(analytics_frame_win, text="00 hrs", font=armin_grotesk_ultra_bold_30, width=47,height=44,bg_color="#000000",fg_color="#000000")
+total_app_time = customtkinter.CTkLabel(analytics_frame_win, text_color='#FFFFFF',text="00 hrs", font=armin_grotesk_ultra_bold_30, width=47,height=44,bg_color="#000000",fg_color="#000000")
 total_app_time.place(x=1080 ,y=152)
 
-active_keys = customtkinter.CTkLabel(analytics_frame_win, text="00", font=armin_grotesk_ultra_bold_30,width=47,height=44,bg_color="#000000",fg_color="#000000")
+active_keys = customtkinter.CTkLabel(analytics_frame_win, text_color='#FFFFFF',text="00", font=armin_grotesk_ultra_bold_30,width=47,height=44,bg_color="#000000",fg_color="#000000")
 active_keys.place(x=883,y=152)
 
 #total encryptions keys analytics frame
-total_encryptions_analytic_frame_label = customtkinter.CTkLabel(analytics_frame_win, text="00", font=armin_grotesk_ultra_bold_30,width=47,height=44,bg_color="#000000",fg_color="#000000")
+total_encryptions_analytic_frame_label = customtkinter.CTkLabel(analytics_frame_win, text_color='#FFFFFF',text="00", font=armin_grotesk_ultra_bold_30,width=47,height=44,bg_color="#000000",fg_color="#000000")
 total_encryptions_analytic_frame_label.place(x=418,y=152)
 
 #total decryptions keys analytics frame
-total_decryptions_analytic_frame_label = customtkinter.CTkLabel(analytics_frame_win, text="00", font=armin_grotesk_ultra_bold_30,width=47,height=44,bg_color="#000000",fg_color="#000000")
+total_decryptions_analytic_frame_label = customtkinter.CTkLabel(analytics_frame_win, text_color='#FFFFFF',text="00", font=armin_grotesk_ultra_bold_30,width=47,height=44,bg_color="#000000",fg_color="#000000")
 total_decryptions_analytic_frame_label.place(x=651,y=152)
 
 def save_elapsed_time(elapsed_hours):
@@ -1095,7 +1095,7 @@ settings_deselect_tab = customtkinter.CTkButton(analytics_frame_win, text="",ima
 settings_deselect_tab.place(x=15,y=565)
 
 #encrypt window
-total_encryptions_decryptions_label2 = customtkinter.CTkLabel(encrypt_frame_win, width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000")
+total_encryptions_decryptions_label2 = customtkinter.CTkLabel(encrypt_frame_win, text_color='#FFFFFF',width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000")
 total_encryptions_decryptions_label2.place(x=127,y=140)
 
 analytics_deselect_tab = customtkinter.CTkButton(encrypt_frame_win, text="",image=analytics_tab_deselect_img,bg_color="#1FFFA9",fg_color="#1FFFA9",hover=False,command=analytics_win)
@@ -1114,7 +1114,7 @@ settings_deselect_tab = customtkinter.CTkButton(encrypt_frame_win, text="",image
 settings_deselect_tab.place(x=15,y=565)
 
 #decrypt window
-total_encryptions_decryptions_label3 = customtkinter.CTkLabel(decrypt_frame_win, width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000")
+total_encryptions_decryptions_label3 = customtkinter.CTkLabel(decrypt_frame_win, text_color='#FFFFFF',width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000")
 total_encryptions_decryptions_label3.place(x=127,y=140)
 
 analytics_tab_deselect = customtkinter.CTkButton(decrypt_frame_win, text="",image=analytics_tab_deselect_img,bg_color="#1FFFA9",fg_color="#1FFFA9",hover=False,command=analytics_win)
@@ -1133,7 +1133,7 @@ settings_deselect_tab = customtkinter.CTkButton(decrypt_frame_win, text="",image
 settings_deselect_tab.place(x=15,y=565)
 
 #keys window
-total_encryptions_decryptions_label4 = customtkinter.CTkLabel(keys_frame_win, width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000")
+total_encryptions_decryptions_label4 = customtkinter.CTkLabel(keys_frame_win, text_color='#FFFFFF', width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000")
 total_encryptions_decryptions_label4.place(x=127,y=140)
 
 analytics_tab_deselect = customtkinter.CTkButton(keys_frame_win, text="",image=analytics_tab_deselect_img,bg_color="#1FFFA9",fg_color="#1FFFA9",hover=False,command=analytics_win)
@@ -1152,7 +1152,7 @@ settings_deselect_tab = customtkinter.CTkButton(keys_frame_win, text="",image=se
 settings_deselect_tab.place(x=15,y=565)
 
 #settings window
-total_encryptions_decryptions_label5 = customtkinter.CTkLabel(settings_frame_win, width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000")
+total_encryptions_decryptions_label5 = customtkinter.CTkLabel(settings_frame_win, text_color='#FFFFFF',width=47,height=44,text="00",font=armin_grotesk_ultra_bold_30,bg_color="#000000",fg_color="#000000")
 total_encryptions_decryptions_label5.place(x=127,y=140)
 
 analytics_tab_deselect = customtkinter.CTkButton(settings_frame_win, text="",image=analytics_tab_deselect_img,bg_color="#1FFFA9",fg_color="#1FFFA9",hover=False,command=analytics_win)

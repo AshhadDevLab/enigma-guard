@@ -405,7 +405,7 @@ def encrypt_win():
           date text
           )""")
     
-        c.execute("INSERT INTO enigma_guard_data VALUES (:title, :encryption_type, :cipher_text, :iv, :nonce, :encryption_code, :key, :date)", {'title': title,'encryption_type': encryption_type,'cipher_text': ct, 'iv': iv, 'nonce': "Not present", 'key': decoded_key, 'encryption_code': 4, 'date': x.strftime("%d"+ "/" +"%m"+ "/" +"%Y")})
+        c.execute("INSERT INTO enigma_guard_data VALUES (:title, :encryption_type, :cipher_text, :iv, :nonce, :key, :encryption_code, :date)", {'title': title,'encryption_type': encryption_type,'cipher_text': ct, 'iv': iv, 'nonce': "Not present", 'key': decoded_key, 'encryption_code': 4, 'date': x.strftime("%d"+ "/" +"%m"+ "/" +"%Y")})
         conn.commit()
         increment_encryptions()
         increment_encryptions_decryptions()

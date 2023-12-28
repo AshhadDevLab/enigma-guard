@@ -61,4 +61,4 @@ Contributions to Enigma Guard are welcome! To contribute:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [BSD-3 License](LICENSE).

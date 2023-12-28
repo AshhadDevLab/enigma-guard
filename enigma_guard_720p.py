@@ -18,7 +18,7 @@ import pickle
 customtkinter.set_default_color_theme(".\\_internal\\src\\green.json")
 
 app = customtkinter.CTk()
-app.geometry('%dx%d+%d+%d' % (1280, 720, (app.winfo_screenwidth()/2) - (1280/2), (app.winfo_screenheight()/2) - (720/2)))
+app.geometry('%dx%d+%d+%d' % (1280, 720, (app.winfo_screenwidth()/2) - (1280/2), (app.winfo_screenheight()/2.1) - (720/2)))
 app.title("enigma:guard")
 app.resizable("False", "False")
 app.iconbitmap(".\\_internal\\assets\\enigma-guard.ico")
@@ -140,9 +140,9 @@ def encrypt_win():
 
     encrypt_frame_win.pack()
 
-    encrypt_title_textbox_frame = customtkinter.CTkFrame(master = encrypt_frame_win,width=235,height=60,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000")
+    encrypt_title_textbox_frame = customtkinter.CTkFrame(master = encrypt_frame_win,width=235,height=60,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000",bg_color="#000000")
     encrypt_title_textbox_frame.place(x=335,y=96)
-    encrypt_title_textbox = customtkinter.CTkTextbox(encrypt_title_textbox_frame,width=198,height=15,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",activate_scrollbars=False)
+    encrypt_title_textbox = customtkinter.CTkTextbox(encrypt_title_textbox_frame,width=198,height=15,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",activate_scrollbars=False,bg_color="#000000")
     def encrypt_title_textbox_text_length():
 
         current_text = encrypt_title_textbox.get("0.0", "end")
@@ -175,20 +175,20 @@ def encrypt_win():
     encryption_type_optionmenu_img_frame = customtkinter.CTkLabel(encrypt_frame_win,height=60,width=225,image=encryption_type_optionmenu_img,bg_color="#000000")
     encryption_type_optionmenu_img_frame.place(x=670,y=96)
 
-    encryption_type_optionmenu = customtkinter.CTkOptionMenu(encrypt_frame_win, values=["Select method","Fernet","CBC", "CTR", "CFB", "OFB"],fg_color="#000000",width=231,height=54,dropdown_fg_color="#000000",font=armin_grotesk_ultra_bold,dropdown_font=armin_grotesk_ultra_bold,hover=False,button_color="#1FFFA9",corner_radius=3,dynamic_resizing=False,dropdown_text_color="#FFFFFF")
+    encryption_type_optionmenu = customtkinter.CTkOptionMenu(encrypt_frame_win, values=["Select method","Fernet","CBC", "CTR", "CFB", "OFB"],fg_color="#000000",width=231,height=54,dropdown_fg_color="#000000",font=armin_grotesk_ultra_bold,dropdown_font=armin_grotesk_ultra_bold,hover=False,button_color="#1FFFA9",corner_radius=3,dynamic_resizing=False,dropdown_text_color="#FFFFFF",bg_color="#000000")
     encryption_type_optionmenu.set("Select method")
     encryption_type_optionmenu.place(x=685,y=101)
     
-    key_textbox_frame = customtkinter.CTkFrame(encrypt_frame_win,width=235,height=60,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000")
+    key_textbox_frame = customtkinter.CTkFrame(encrypt_frame_win,width=235,height=60,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000",bg_color="#000000")
     key_textbox_frame.place(x=1010,y=96)
-    key_textbox = customtkinter.CTkTextbox(key_textbox_frame,width=195,height=15,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",activate_scrollbars=False,wrap=None)
+    key_textbox = customtkinter.CTkTextbox(key_textbox_frame,width=195,height=15,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",activate_scrollbars=False,wrap=None,bg_color="#000000")
     key_textbox.insert("0.0", "Key")
     key_textbox.configure(state="disabled")
     key_textbox.place(x=10,y=7)
 
-    user_encrypt_text_textbox_frame = customtkinter.CTkFrame(master = encrypt_frame_win,width=910,height=193,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000")
+    user_encrypt_text_textbox_frame = customtkinter.CTkFrame(master = encrypt_frame_win,width=910,height=193,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000",bg_color="#000000")
     user_encrypt_text_textbox_frame.place(x=335,y=188)
-    user_encrypt_text_textbox = customtkinter.CTkTextbox(user_encrypt_text_textbox_frame,width=880,height=168,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent")
+    user_encrypt_text_textbox = customtkinter.CTkTextbox(user_encrypt_text_textbox_frame,width=880,height=168,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",bg_color="#000000")
     user_encrypt_text_textbox.insert("0.0", "Enter text to encrypt")
     user_encrypt_text_textbox.place(x=10,y=10)
     
@@ -204,9 +204,9 @@ def encrypt_win():
     user_encrypt_text_textbox.bind("<FocusOut>", reset_user_encrypt_text_textbox_clear_text) 
     user_encrypt_text_textbox.bind("<Tab>", on_tab_pressed)
 
-    user_encrypted_text_textbox_frame = customtkinter.CTkFrame(master = encrypt_frame_win,width=910,height=193,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000")
+    user_encrypted_text_textbox_frame = customtkinter.CTkFrame(master = encrypt_frame_win,width=910,height=193,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000",bg_color="#000000")
     user_encrypted_text_textbox_frame.place(x=335,y=410)
-    user_encrypted_text_textbox = customtkinter.CTkTextbox(user_encrypted_text_textbox_frame,width=880,height=168,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent")
+    user_encrypted_text_textbox = customtkinter.CTkTextbox(user_encrypted_text_textbox_frame,width=880,height=168,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",bg_color="#000000")
     user_encrypted_text_textbox.insert("0.0", "Encrypted text")
     user_encrypted_text_textbox.place(x=10,y=10)
     user_encrypted_text_textbox.configure(state="disabled")
@@ -480,7 +480,7 @@ def encrypt_win():
                 else:
                     CTkMessagebox(title="Error: E009", message="Select encryption method", icon="cancel")
 
-    encrypt_button = customtkinter.CTkButton(encrypt_frame_win,width=250,height=58,text="",fg_color="#1FFFA9",text_color="#000000",font=armin_grotesk_ultra_bold,anchor='center',image=encrypt_button_img,hover=False,command=complete_encryption)
+    encrypt_button = customtkinter.CTkButton(encrypt_frame_win,width=250,height=58,text="",fg_color="#1FFFA9",text_color="#000000",font=armin_grotesk_ultra_bold,anchor='center',image=encrypt_button_img,hover=False,command=complete_encryption,bg_color="#000000")
     encrypt_button.place(x=665,y=627)
 
 def decrypt_win():
@@ -521,19 +521,19 @@ def decrypt_win():
     decryption_type_optionmenu_img_frame = customtkinter.CTkLabel(decrypt_frame_win,height=61,width=220,image=decryption_type_optionmenu_img,bg_color="#000000")
     decryption_type_optionmenu_img_frame.place(x=335,y=96)
 
-    decryption_type_optionmenu = customtkinter.CTkOptionMenu(decrypt_frame_win, values=["Title"] + title_list ,fg_color="#000000",width=231,height=54,dropdown_fg_color="#000000",font=armin_grotesk_ultra_bold,dropdown_font=armin_grotesk_ultra_bold,hover=False,button_color="#1FFFA9",corner_radius=3,dynamic_resizing=False,dropdown_text_color="#FFFFFF",command=on_option_selected)
+    decryption_type_optionmenu = customtkinter.CTkOptionMenu(decrypt_frame_win, values=["Title"] + title_list ,fg_color="#000000",width=231,height=54,dropdown_fg_color="#000000",font=armin_grotesk_ultra_bold,dropdown_font=armin_grotesk_ultra_bold,hover=False,button_color="#1FFFA9",corner_radius=3,dynamic_resizing=False,dropdown_text_color="#FFFFFF",command=on_option_selected,bg_color="#000000")
     decryption_type_optionmenu.set("Title")
     decryption_type_optionmenu.place(x=349,y=101)
 
-    decryption_type_frame = customtkinter.CTkFrame(decrypt_frame_win,width=235,height=60,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000")
+    decryption_type_frame = customtkinter.CTkFrame(decrypt_frame_win,width=235,height=60,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000",bg_color="#000000")
     decryption_type_frame.place(x=670,y=96)
-    decryption_type = customtkinter.CTkTextbox(decryption_type_frame,width=195,height=15,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",activate_scrollbars=False,wrap=None)
+    decryption_type = customtkinter.CTkTextbox(decryption_type_frame,width=195,height=15,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",activate_scrollbars=False,wrap=None,bg_color="#000000")
     decryption_type.insert("0.0", "Encryption type")
     decryption_type.configure(state="disabled")
     decryption_type.place(x=10,y=7)
-    decrypt_key_textbox_frame = customtkinter.CTkFrame(decrypt_frame_win,width=235,height=60,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000")
+    decrypt_key_textbox_frame = customtkinter.CTkFrame(decrypt_frame_win,width=235,height=60,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000",bg_color="#000000")
     decrypt_key_textbox_frame.place(x=1010,y=96)
-    decrypt_key_textbox = customtkinter.CTkTextbox(decrypt_key_textbox_frame,width=195,height=15,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",activate_scrollbars=False)
+    decrypt_key_textbox = customtkinter.CTkTextbox(decrypt_key_textbox_frame,width=195,height=15,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",activate_scrollbars=False,bg_color="#000000")
     decrypt_key_textbox.insert("0.0", "Key")
     decrypt_key_textbox.place(x=10,y=7)
 
@@ -550,16 +550,16 @@ def decrypt_win():
     decrypt_key_textbox.get("0.0", "end")
     decrypt_key_textbox.bind("<Tab>", on_tab_pressed)
 
-    user_decrypt_text_textbox_frame = customtkinter.CTkFrame(master = decrypt_frame_win,width=910,height=193,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000")
+    user_decrypt_text_textbox_frame = customtkinter.CTkFrame(master = decrypt_frame_win,width=910,height=193,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000",bg_color="#000000")
     user_decrypt_text_textbox_frame.place(x=335,y=188)
-    user_decrypt_text_textbox = customtkinter.CTkTextbox(user_decrypt_text_textbox_frame,width=880,height=168,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent")
+    user_decrypt_text_textbox = customtkinter.CTkTextbox(user_decrypt_text_textbox_frame,width=880,height=168,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",bg_color="#000000")
     user_decrypt_text_textbox.insert("0.0", "Encrypted text")
     user_decrypt_text_textbox.configure(state="disabled")
     user_decrypt_text_textbox.place(x=10,y=10)
 
-    user_decrypted_text_textbox_frame = customtkinter.CTkFrame(master = decrypt_frame_win,width=910,height=193,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000")
+    user_decrypted_text_textbox_frame = customtkinter.CTkFrame(master = decrypt_frame_win,width=910,height=193,border_color="#1FFFA9",border_width=3,corner_radius=5,fg_color="#000000",bg_color="#000000")
     user_decrypted_text_textbox_frame.place(x=335,y=410)
-    user_decrypted_text_textbox = customtkinter.CTkTextbox(user_decrypted_text_textbox_frame,width=880,height=168,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent")
+    user_decrypted_text_textbox = customtkinter.CTkTextbox(user_decrypted_text_textbox_frame,width=880,height=168,text_color="#FFFFFF",font=armin_grotesk_ultra_bold,fg_color="transparent",bg_color="#000000")
     user_decrypted_text_textbox.insert("0.0", "Decrypted text")
     user_decrypted_text_textbox.place(x=10,y=10)
     user_decrypted_text_textbox.configure(state="disabled")
@@ -662,7 +662,7 @@ def decrypt_win():
         title_to_search = decryption_type_optionmenu.get()
         retrieve_data_by_title(title_to_search)
 
-    decrypt_button = customtkinter.CTkButton(decrypt_frame_win, width=250, height=58, text="", fg_color="#1FFFA9", text_color="#000000", font=armin_grotesk_ultra_bold, anchor='center', image=decrypt_button_img, hover=False, command=get_data)
+    decrypt_button = customtkinter.CTkButton(decrypt_frame_win, width=250, height=58, text="", fg_color="#1FFFA9", text_color="#000000", font=armin_grotesk_ultra_bold, anchor='center', image=decrypt_button_img, hover=False, command=get_data,bg_color="#000000")
     decrypt_button.place(x=665,y=627)
 
 def keys_win():
@@ -675,7 +675,7 @@ def keys_win():
 
     def keys_label_win():
         global keys_label_frame_win   
-        keys_label_frame_win = customtkinter.CTkScrollableFrame(keys_frame_win, width=950, height=750, bg_color="black",fg_color="black",label_anchor="s",scrollbar_button_color="#1FFFA9")
+        keys_label_frame_win = customtkinter.CTkScrollableFrame(keys_frame_win, width=950, height=550, bg_color="black",fg_color="black",label_anchor="s",scrollbar_button_color="#1FFFA9")
         keys_label_frame_win.place(x=300,y=90)
 
     keys_label_win()
@@ -1209,7 +1209,7 @@ def destroy_window():
     else:
         app.destroy()
 
-settings_minimize_frame = customtkinter.CTkLabel(settings_frame_win,text="",image=settings_minimize)
+settings_minimize_frame = customtkinter.CTkLabel(settings_frame_win,text="",image=settings_minimize,bg_color="#000000")
 settings_minimize_frame.place(x=335,y=110)
 
 check_var = customtkinter.StringVar(value="off")

@@ -811,7 +811,7 @@ try_enigma_guard = customtkinter.CTkButton(frame_main_win, width=250,height=60,i
 try_enigma_guard.place(x=161,y=481)
 
 def ashhad_github_callback():
-    webbrowser.open('https://github.com/Ashhad776')
+    webbrowser.open('https://github.com/AshhadDevLab')
     frame = customtkinter.CTkLabel(frame_main_win, width=1280, height=720, image=bg_img,text="")
     frame.pack()
 
